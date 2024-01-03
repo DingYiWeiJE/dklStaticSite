@@ -1,2 +1,20 @@
-# dklStaticSite
-丁凯乐的个人主页， 能不能让我睡个好觉
+# dklSS
+
+A static site base on [dumi](https://d.umijs.org).
+
+## Development
+
+```bash
+# install dependencies
+$ pnpm install
+
+# start dev server
+$ pnpm start
+
+# build docs
+$ pnpm run build
+```
+
+## LICENSE
+
+MIT

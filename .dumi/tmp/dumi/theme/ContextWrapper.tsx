@@ -30,7 +30,7 @@ export default function DumiContextWrapper() {
 
   return (
     <SiteContext.Provider value={{
-      pkg: {},
+      pkg: {"name":"dklSS","description":"A static site based on dumi","version":"0.0.1","license":"MIT","authors":["dingkaile"]},
       historyType: "browser",
       entryExports,
       demos,
@@ -39,8 +39,8 @@ export default function DumiContextWrapper() {
       loading,
       setLoading,
       hostname: undefined,
-      themeConfig: {"footer":"Copyright © 2024 | Powered by <a href=\"https://d.umijs.org\" target=\"_blank\" rel=\"noreferrer\">dumi</a>","prefersColor":{"default":"light","switch":true},"nprogress":true,"lastUpdated":true},
-      _2_level_nav_available: false,
+      themeConfig: {"footer":"Copyright © 2024 | Powered by <a href=\"https://d.umijs.org\" target=\"_blank\" rel=\"noreferrer\">dumi</a>","prefersColor":{"default":"light","switch":true},"nprogress":true,"lastUpdated":true,"name":"dklSS"},
+      _2_level_nav_available: true,
     }}>
       {outlet}
     </SiteContext.Provider>
