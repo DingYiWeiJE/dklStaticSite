@@ -1,27 +1,33 @@
-name: github pages
-
+name: Build and Deploy
 on:
   push:
     branches:
-      - main # default branch
-
+      - main
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2.3.1
+
+      - name: Lock npm version
+        uses: actions/setup-node@v3
         with:
-          # 如果配置 themeConfig.lastUpdated 为 false，则不需要添加该参数以加快检出速度
-          fetch-depth: 0
-      - name: Install dependencies
-        run: npm install
-      - name: Build with dumi
-        # 文档编译命令，如果是 react 模板需要修改为 npm run docs:build
-        run: npm run build
+          node-version: 16.18.0
+
+      - name: Install and Build
+        run: |
+          npm i -g pnpm
+          pnpm run init
+          pnpm run build:doc
+        env:
+          NODE_OPTIONS: '--max_old_space_size=4096'
+
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
+          BRANCH: gh-pages
+          FOLDER: dist
           github_token: ${{ secrets.DINGKAILE_DEPLOY }}
-          # 文档目录，如果是 react 模板需要修改为 docs-dist
-          publish_dir: ./dist
