@@ -6,7 +6,7 @@ hero:
   actions:
     - text: Hello
       link: /
-    - text: World
+    - text: DingKaiLe
       link: /
 features:
   - title: Hello
