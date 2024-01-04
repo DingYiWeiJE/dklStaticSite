@@ -6,7 +6,7 @@ hero:
   actions:
     - text: 终于
       link: /
-    - text: 搞定了耶
+    - text: 昨晚搞的，看看是不是因为太慢生效了
       link: /
 features:
   - title: Hello
