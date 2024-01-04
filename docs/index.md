@@ -4,9 +4,9 @@ hero:
   title: Site
   description: A static site based on dumi
   actions:
-    - text: Hello2
+    - text: 终于
       link: /
-    - text: DingKaiLe
+    - text: 搞定了
       link: /
 features:
   - title: Hello
