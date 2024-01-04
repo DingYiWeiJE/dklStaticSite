@@ -6,7 +6,7 @@ hero:
   actions:
     - text: 终于
       link: /
-    - text: 搞定了
+    - text: 搞定了耶
       link: /
 features:
   - title: Hello
