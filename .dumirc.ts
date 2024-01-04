@@ -2,7 +2,7 @@ import { defineConfig } from 'dumi';
 
 export default defineConfig({
   themeConfig: {
-    name: 'dklSS',
+    name: '丁凯乐',
   },
   publicPath: '/dklStaticSite/',
 });
