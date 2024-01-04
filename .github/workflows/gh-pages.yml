@@ -17,6 +17,6 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          BRANCH: gh-pages
-          FOLDER: dist
+          publish_branch: gh-pages
+          publish_dir: dist
           github_token: ${{ secrets.DINGKAILE_DEPLOY }}
